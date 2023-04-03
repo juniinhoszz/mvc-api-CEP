@@ -1,7 +1,7 @@
 <?php
 namespace API\Model;
 
-use API\DAO\CidadeDAO;
+use API\DAO\EnderecoDAO;
 use Exception;
 
 class CidadeModel extends Model 
@@ -10,10 +10,10 @@ class CidadeModel extends Model
 
     public function getCidadesByUf(string $uf) 
     {
-        try 
+        try
         {
-            $dao = new CidadeDAO();
-            return $dao->selectCidadesByUf((string) $uf);
+            $dao = new EnderecoDAO();
+            return $dao->selectCidadesByUf($uf);
         } catch (Exception $err) {
             echo $err->getMessage();
         }
