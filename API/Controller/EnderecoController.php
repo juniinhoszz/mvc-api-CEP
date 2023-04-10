@@ -89,7 +89,7 @@ class EnderecoController extends Controller
             $model = new CidadeModel();
             $model->GetCidadesByUF($uf);
 
-            parent::setResponseAsJSON($model->rows);
+            parent::getResponseAsJson($model->rows);
         }
         catch(Exception $e)
         {

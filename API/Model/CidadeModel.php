@@ -13,7 +13,8 @@ class CidadeModel extends Model
         try
         {
             $dao = new EnderecoDAO();
-            return $dao->selectCidadesByUf($uf);
+
+            $this->rows = $dao->selectCidadesByUF($uf);
         } catch (Exception $err) {
             echo $err->getMessage();
         }
